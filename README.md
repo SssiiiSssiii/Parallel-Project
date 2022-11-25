@@ -39,7 +39,6 @@ int main() {
     cout << find_Max(triangle);
 
 }
-
-Running Time = O(rows * cols)
-
 ```
+* Running Time = O(rows * cols)
+
