@@ -1,5 +1,5 @@
 ## Description
-* By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is `23`.                                 
+* By starting at the top of the triangle below and moving to `adjacent` numbers on the row below, the maximum total from top to bottom is `23`.                                 
 ![Alt text](/Images/tr2.png)                 
 
 
@@ -15,7 +15,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int find_Max(int triangle[15][15]){
+int find_Max_Sum_Adjacent(int triangle[15][15]){
     for (int row = 13; row >= 0; row--) {
         for (int col = 0; col < 15; col++)
             triangle[row][col] += max(triangle[row + 1][col], triangle[row + 1][col + 1]);
@@ -42,13 +42,13 @@ int main() {
         {4,62,98,27,23,9,70,98,73,93,38,53,60,4,23}
     };
 
-    cout << find_Max(triangle);
+    cout << find_Max_Sum_Adjacent(triangle);
 
 }
 ```
 ## Running Time for the best sequential solution 
-* O(rows * cols) = rows<sup>2<sup>
-*   where cols = no of rows and n = no of columns
+* O(rows * cols) = O(rows<sup>2</sup>) 
+* where cols = Number of rows and cols = Number of of columns
 
 # Parallel Code using OpenMP
 ```c
@@ -91,11 +91,11 @@ int main() {
 ```
 
 ## Running Time for the parallel solution 
-* O(n) = Number of rows
+* O(rows) = Number of rows
 
 
 ## Performance Measuring:
-* Speedup S(n) =  Running Time for the best sequential solution / Running Time for the parallel solution = (rows * rows) / rows = rows
-* Cost C(n) = Number of processors *  Running Time for the parallel solution = Number of columns * rows = rows * rows = rows<sup>2<sup>
-* Efficiency E(n) = S(n) /  Number of processors = rows / rows = 1
-It is cost optimal, because:  C(n) <= Running Time for the best sequential solution 
+* Speedup S(n) =  Running time for the best sequential solution / Running time for the parallel solution = rows<sup>2<sup> / rows = rows
+* Cost C(n) = Number of processors * Running time for the parallel solution = Number of columns * rows = rows * rows = rows<sup>2<sup>
+* Efficiency E(n) = S(n) /  Number of processors = rows / cols = rows / rows = 1                 
+It is cost optimal, because:  C(n) <= Running time for the best sequential solution = rows<sup>2<sup> 
