@@ -40,5 +40,6 @@ int main() {
 
 }
 ```
-* Running Time = O(rows * cols)
+## Running Time 
+* O(rows * cols)
 
