@@ -1,9 +1,14 @@
 ## Description
-* By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.
- ![Alt text](/Images/tr2.png)
-* Find the maximum total from top to bottom of the triangle below   
+* By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is `23`.                                 
+![Alt text](/Images/tr2.png)                 
 
-![Alt text](/Images/tr.png)
+
+
+* That is, 3 + 7 + 4 + 9 = 23.
+
+* Find the maximum total from top to bottom of the triangle below   
+![Alt text](/Images/tr.png)   
+
 ## Best Sequential Code using Dynamic programming
 
 ```c
