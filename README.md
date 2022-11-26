@@ -48,7 +48,7 @@ int main() {
 ```
 ## Running Time for the best sequential solution 
 * O(rows * cols) = O(rows<sup>2</sup>) 
-* Where cols = Number of rows and cols = Number of of columns
+* Where cols =  Number of of rows
 
 # Parallel Code using OpenMP
 ```c
