@@ -95,7 +95,7 @@ int main() {
 
 
 ## Performance Measuring:
-* Speedup S(n) =  Running time for the best sequential solution / Running time for the parallel solution = rows<sup>2<sup> / rows = rows
-* Cost C(n) = Number of processors * Running time for the parallel solution = Number of columns * rows = rows * rows = rows<sup>2<sup>
-* Efficiency E(n) = S(n) /  Number of processors = rows / cols = rows / rows = 1                 
-It is cost optimal, because:  C(n) <= Running time for the best sequential solution = rows<sup>2<sup> 
+* Speedup =  Running time for the best sequential solution / Running time for the parallel solution = rows<sup>2<sup> / rows = rows
+* Cost = Number of processors * Running time for the parallel solution = Number of columns * rows = rows * rows = rows<sup>2<sup>
+* Efficiency = Speedup /  Number of processors = rows / cols = rows / rows = 1                 
+It is cost optimal, because:  Cost <= Running time for the best sequential solution = rows<sup>2</sup> 
