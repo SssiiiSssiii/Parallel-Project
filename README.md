@@ -90,6 +90,9 @@ int main() {
 
 ```
 
+### Answer
+`1074`
+
 ## Running Time for the parallel solution 
 * O(rows) = Number of rows
 
